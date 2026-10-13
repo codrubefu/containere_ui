@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base-950: #15181A;
+  --base-900: #1C1F22;
+  --base-800: #24282C;
+  --base-700: #2E3338;
+  --base-600: #3B4147;
+  --paper: #EDEEEC;
+  --muted: #9BA3AA;
+}
+
+:root[data-theme="light"] {
+  --base-950: #F3F1EC;
+  --base-900: #FFFFFF;
+  --base-800: #EFECE5;
+  --base-700: #E1DDD3;
+  --base-600: #CCC6B8;
+  --paper: #1B1D1F;
+  --muted: #6B6F73;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.tap {
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.tap:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}

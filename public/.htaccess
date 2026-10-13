@@ -1,0 +1,10 @@
+# Basic auth — user: acord
+# ATENȚIE: AuthUserFile trebuie să fie calea ABSOLUTĂ pe server către .htpasswd
+AuthType Basic
+AuthName "Acord - acces restrictionat"
+AuthUserFile /home/rrhdxppo/container.spa360.ro.htpasswd
+Require valid-user
+
+<Files ".ht*">
+    Require all denied
+</Files>
